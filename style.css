@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.orange {
+    color:#d18708;
+}
+
+.container {
+    padding: 48px 0;
+    width:100%;
+}
+h1 {
+    font-size:42px;
+    font-weight:700;
+}
+
+h2 {
+    font-size:36px;
+    font-weight: 500;
+}
+
+.click {
+    transition:all 300ms ease;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+.click:hover {
+    transform:scale(1.05);
+}
+
+.click:active {
+    transform:scale(.95);
+}
+
+.row {
+    max-width:1200px;
+    margin:0 auto;
+    width:100%;
+}
+
+/* CONTACT BTN BOTTOM RIGHT  */
+
+.fa-address-book {
+    font-size:40px;
+    color:white;
+    position: absolute;
+    top:40px;
+    background-color:#242424;
+    border-radius: 50%;
+    padding:24px;
+    right:40px;
+    z-index: 100;
+}
+
+.address-book__text {
+    left:12px;
+    position: absolute;
+    bottom:-28px;
+    transition: all 300ms ease;
+    font-size:20px;
+    color:white;
+    transform: scale(0);
+    z-index: 100;
+    
+
+}
+
+.fa-address-book:hover .address-book__text {
+ transform: scale(1);
+ color: #242424;
+}
+
+/* NAV SECTION  */
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+padding:48px;
+align-items: center;
+
+}
+
+
+.link__hover-effect {
+position: relative;
+cursor:pointer;
+}
+
+.link__hover-effect:after {
+    content:"";
+    bottom: -3px;
+    right:0;
+    height:3px;
+    width:0;
+    position: absolute;
+    background-color: #242424;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect:hover:after {
+    left:0;
+    width: 100%;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+}
+
+
+.fa-magnifying-glass {
+font-size:100px;
+display: flex;
+align-items: center;
+justify-content: center;
+animation: magnify 10s infinite 1000ms ease-in-out ;
+color:#242424;
+
+
+}
+
+.fa-clapperboard {
+    position:absolute;
+    transform: scale(0);
+    opacity: 0;
+    font-size:36px;
+    left:20px;
+    bottom:44px;
+    animation: movieClapper 10s infinite 1000ms ease-in-out ;
+    color:#242424;
+}
+
+@keyframes magnify{
+    0% {
+        transform: scale(1);
+     
+    }
+   
+    20% {
+        transform:scale(1.5) 
+        
+    }
+    100% {
+        transform: scale(1.5) 
+    }
+}
+
+@keyframes movieClapper {
+    0% {
+        transform:scale(0);
+        opacity: 0;
+    }
+
+    20% {
+        transform:scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.nav__logo--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__logo--title {
+font-size:64px;
+margin-left:12px;
+font-weight:700;
+}
+
+.nav__list {
+    display: flex;
+
+}
+
+.nav__list--item {
+    margin-right: 28px;
+
+}
+
+.nav__contact {
+    margin-right: 0;
+}
+
+.nav__list--link {
+    color:#242424;
+    font-size:24px;
+    font-weight:500;
+}
+
+.nav__list--link:active {
+color:#d18708;
+}
+
+/* GET STARTED */
+
+.get__started--btn {
+    height:20vh;
+    width:100%;
+    border-radius:100px;
+    max-width:60vw;
+    border:.5px solid #242424;
+    box-shadow: 2px 2px 2px 0 #242424;
+    position: relative;
+    background-color: transparent;
+    opacity:1;
+}
+
+.get__started--btn:before {
+    content:"";
+    background-image: url(./Assets/moviecollagec.webp);
+    background-size: 100%;
+    filter: grayscale(65%);
+    filter:brightness(40%);
+    position: absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    border-radius:100px;
+    border:none;
+    
+}
+
+.row__get--started {
+    padding: 0 48px 48px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.intro__header {
+    max-width:700px;
+    text-align: center;
+    margin-bottom:28px;
+}
+
+.intro__sub-header {
+    text-align: center;
+    max-width: 650px;
+    margin-bottom:42px;
+    color:#d18708;
+    font-size:24px;
+    opacity:90%;
+}
+
+
+.get__started--btn--text {
+    opacity: 1;
+    position: relative;
+    color:white;
+    font-size:52px;
+    font-weight:700;
+
+}
+
+.get__started--btn:active .get__started--btn--text  {
+    color:#d18708;
+}
+
+/* FOOTER  */
+
+footer {
+    background-color: #242424;
+    display: flex;
+    position: relative;
+}
+
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
